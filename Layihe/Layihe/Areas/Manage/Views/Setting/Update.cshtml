@@ -1,0 +1,24 @@
+﻿@using Layihe.Areas.Manage.Models.Setting
+@model UpdateSettingVm
+
+<div class="col-lg-8  stretch-card" style="margin:auto; margin-top:20px;">
+    <div class="card">
+        <div class="container" style="display:flex;justify-content:space-between;">
+            <form method="post" enctype="multipart/form-data">
+                <div class="mb-3" style="margin-bottom:20px;">
+                    <label for="@ViewBag.Key"></label>
+                </div>
+                <div class="mb-6">
+                    <label asp-for="Value" class="form-label">value</label>
+                    <textarea asp-for="Value" class="form-control"></textarea>
+                    <span asp-validation-for="Value" style="color:red"></span>
+                </div>
+                <div class="mb-8 d-flex" style="box-sizing:border-box">
+                    
+                    <div asp-validation-summary="All" class="text-danger" style="margin-top:20px;margin-left:20px;right:0;"></div>
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+        </div>
+    </div>
+</div>
